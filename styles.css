@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d;
+    color: #d9e8ff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+    background-color: #f2f2f2;
+    color: #111;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+body.light .resume-btn {
+    background: #333;
+    color: white;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 999;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    left: 4px;
+    bottom: 4px;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+#mode-label {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Intro Section */
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 25    0px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+@media (min-width: 768px) {
+    .intro-content {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .intro-text {
+        text-align: left;
+    }
+}
+
+.owl-carousel .owl-nav span {
+    display: none;
+  }
+  .owl-carousel .owl-nav .owl-prev:before,
+  .owl-carousel .owl-nav .owl-next:before {
+    background: none;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: 'unicons';
+    font-size: 100px;
+    line-height: normal;
+  }
+  .owl-carousel .owl-nav .owl-prev:before {
+    content: '\e833';
+    left: -45px;
+  }
+  .owl-carousel .owl-nav .owl-next:before {
+    content: '\e836';
+    right: -45px;
+  }
+  
+  .owl-theme .owl-nav [class*=owl-] {
+    background: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+  }
+  .owl-theme .owl-nav [class*=owl-]:hover {
+    color: #ffc200;
+  }
+  .owl-theme .owl-dots .owl-dot {
+    outline: none;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+  }
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #5b5b5b;
+  }
+  
+  @media (min-width: 1270px) {
+    .owl-theme .owl-dots {
+      position: relative;
+      bottom: 50px;
+    }
+  }
+  @media (max-width: 991px) {
+    .owl-theme .owl-dots {
+      position: relative;
+      bottom: 20px;
+    }
+  }
+
+
+/* Skills Section */
+.skills {
+    margin-top: 50px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.skill {
+    background: #222;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+
+
+body.light .skill {
+    background: #ddd;
+    color: #000;
+}
+
+/* Lottie Animation */
+#lottie-skill-animation {
+    margin-top: 30px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Buttons - Vertical */
+.contact-buttons-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background-color: #1f1f1f;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    width: auto;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.contact-btn img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.contact-btn:hover {
+    background-color: #333;
+}
+
+body.light .contact-btn {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+}
+
+/* Certificates Section */
+.certificates {
+    margin: 60px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+.certificates h2 {
+    margin-bottom: 20px;
+}
+
+.certificate-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.certificate {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.certificate:hover {
+    transform: translateY(-5px);
+}
+
+body.light .certificate {
+    background: #eee;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+body.light footer {
+    background: #ccc;
+    color: #111;
+}
