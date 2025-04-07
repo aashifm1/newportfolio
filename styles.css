@@ -106,8 +106,8 @@ input:checked + .slider:before {
 }
 
 .profile-img {
-    width: 250px;
-    height: 25    0px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
 }
